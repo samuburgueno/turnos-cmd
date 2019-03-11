@@ -1,28 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Api from './utils/api.js'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+	async componentDidMount() {
+		const api = new Api()
+		const dataset = await api.getDataset('94e6595d-9dd9-4b07-9120-301bb15a3402');
+		console.log(dataset)
+
+		const resource = await api.getResource('a5d53703-00fd-4f4d-bc4f-7b08d6c71879');
+		console.log(resource)
+	}
+
+	render() {
+		return (
+			<nav className="navbar navbar-dark bg-dark">
+			  <span className="navbar-brand mb-0 h1">Turnos CMD</span>
+			</nav>
+		);
+	}
 }
 
 export default App;
