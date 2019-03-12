@@ -1,31 +1,20 @@
 import React, { Component } from 'react';
-import Api from '../../utils/api.js'
+import { Link } from 'react-router-dom';
 
 class Home extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            distritos: false
-        }
-    }
-
-    async componentDidMount() {
-        const api = new Api()
-        const dataset = await api.getDataset('94e6595d-9dd9-4b07-9120-301bb15a3402');
-        this.setState({
-            distritos: dataset.result[0].resources
-        });
-        console.log(dataset)
-    }
-
-    render() {
-        return (
-            <nav className="navbar navbar-dark bg-dark">
-              <span className="navbar-brand mb-0 h1">Turnos CMD</span>
-            </nav>
-        );
-    }
+	render() {
+		return (
+			<Link to="/distrito/norte">
+				<div className="container">
+			  		<div className="card">
+  						<div className="card-body">
+						    <h5 className="card-title">Distrito Norte</h5>
+						</div>
+					</div>
+				</div>
+			</Link>
+		);
+	}
 }
 
 export default Home;
