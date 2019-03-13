@@ -1,11 +1,21 @@
 .Layout > header{
 	border-bottom: solid 3px #EE8601;
-    margin-bottom: 30px;
 }
 
-/*.Layout > header .navbar-brand img{
-	max-width: 140px
-}*/
+.Layout > header .navbar-brand img{
+    max-width: 140px
+}
+
+@media (min-width: 576px) {
+    .Layout > header .navbar-brand img{
+        max-width: none
+    }
+
+    .Layout > header{
+        margin-bottom: 30px;
+    }
+}
+
 
 .Layout > header .navbar{
 	padding-left: 0
