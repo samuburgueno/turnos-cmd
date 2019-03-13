@@ -20,8 +20,15 @@ class Api {
 
     async getResource(id_resource) {
         const resp = await fetch(`${BASE_API}action/datastore/search.json?resource_id=${id_resource}`)
-        const data = await resp.json()
-        return data;
+        if (resp.status === 200) {
+            const data = await resp.json()
+            return data;
+        } else {
+            return {
+                error: resp.status,
+                message: resp.statusText
+            }
+        }
     }
 }
 

@@ -1,5 +1,5 @@
 .Header{
-	padding: 15px
+	padding: 15px 0px
 }
 
 .Header h5{
@@ -8,7 +8,7 @@
 	font-weight: 900;
 	color: #383B3E;
 	font-family: 'Montserrat', sans-serif;
-}	
+}
 
 .Header p{
 	font-size: 12px;

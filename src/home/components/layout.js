@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import logo from '../../assets/img/logo-rosario.png';
 
@@ -11,7 +12,7 @@ function Layout(props) {
 	          <div className="navbar shadow-sm text-center">
 	            <div className="container d-flex justify-content-between">
 	              <a href="/" className="navbar-brand d-flex align-items-center">
-	                <img src={logo} alt="Logo de Rosario= "/>
+	                <img className="img-responsive" src={logo} alt="Logo de Rosario= "/>
 	              </a>
 	              {/*<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
 	                <span className="navbar-toggler-icon"></span>
@@ -19,7 +20,28 @@ function Layout(props) {
 	            </div>
 	          </div>
 	        </header>
-			{props.children}
+	        <div className="container">
+	        	<div className="main row">
+			        <div className="sidebar-left col-sm-3 d-none d-sm-block">
+					    {/*Menu principal*/}
+					    <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					    	<h5><strong>Distritos</strong></h5>
+                            <NavLink to="/distrito/norte" className="nav-link">Norte</NavLink>
+                            <NavLink to="/distrito/noroeste" className="nav-link">Noroeste</NavLink>
+                        </div>
+			        </div>
+			        <div className="col-sm-9">
+				        <div className="row">
+					        <div className="main-content col-sm-8">
+					        	{props.children}
+					        </div>
+					        <div className="sidebar-right col-sm-4">
+					    		{/*Barra lateral derecha*/}
+					        </div>
+				        </div>
+			        </div>
+	        	</div>
+	        </div>
 		</div>
 	)
 }

@@ -9,11 +9,8 @@ import Api from '../../utils/api.js';
 
 const ATENDIDOS = {
     norte: '9867ebdb-b372-4c7e-8fe1-eb1c74173483',
+    'noroeste': ''
 }
-
-// const EMITIDOS = {
-//     norte: 'a5d53703-00fd-4f4d-bc4f-7b08d6c71879',
-// }
 
 class Distrito extends Component {
     constructor(props) {
@@ -25,30 +22,51 @@ class Distrito extends Component {
         }
     }
 
-    async componentDidMount() {
-        const api = new Api()
-        const atendidos = await api.getResource(ATENDIDOS[this.props.match.params.distrito]);
+    componentDidMount() {
+        this.obtenerTurnos(this.props.match.params.distrito)
+    }
 
-        this.setState({
-            turnos: atendidos.result.records,
-            distrito: this.props.match.params.distrito
-        });
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.match.params.distrito !== this.state.distrito) {
+            this.obtenerTurnos(nextProps.match.params.distrito)
+        }
+    }
+
+    async obtenerTurnos(distrito) {
+        const api = new Api()
+        const resp = await api.getResource(ATENDIDOS[distrito]);
+
+        if (!resp.error) {
+            this.setState({
+                turnos: resp.result.records,
+                distrito: distrito
+            });
+        } else {
+            this.setState({
+                error: resp.message,
+                turnos: false,
+                distrito: distrito
+            });
+        }
+
     }
 
     render() {
         return (
             <Layout>
-                <Header 
-                    title={`Distrito ${this.state.distrito}`} 
+                <Header
+                    title={`Distrito ${this.state.distrito}`}
                     description="Oficinas de atención al público">
                 </Header>
-                <Turnos>
-                    {this.state.turnos.map((turno) => {
-                        return(
-                            <Turno key={turno.Ticket} {...turno} />
-                        )
-                    })}
-                </Turnos>
+                {this.state.turnos &&
+                    <Turnos>
+                        {this.state.turnos.map((turno) => {
+                            return(
+                                <Turno key={turno.Ticket + turno.FechaHora} {...turno} />
+                            )
+                        })}
+                    </Turnos>
+                }
             </Layout>
         );
     }
