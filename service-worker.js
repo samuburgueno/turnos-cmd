@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/turnos-cmd/precache-manifest.a19d9275c5e3106d6443f3a52d9ff5c7.js"
+  "/turnos-cmd/precache-manifest.1eb5fc1869820d6af672849016c84268.js"
 );
 
 workbox.clientsClaim();
