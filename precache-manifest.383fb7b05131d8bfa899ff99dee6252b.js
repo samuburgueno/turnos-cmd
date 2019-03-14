@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "https://samuburgueno.github.io/turnos-cmd/static/js/runtime~main.c8fe6400.js"
   },
   {
-    "revision": "0c2c70bb2a85ec0b658a",
-    "url": "https://samuburgueno.github.io/turnos-cmd/static/js/main.5413f275.chunk.js"
+    "revision": "890e78ee5ea7d1cc3575",
+    "url": "https://samuburgueno.github.io/turnos-cmd/static/js/main.8d99eb5d.chunk.js"
   },
   {
     "revision": "23bf3fc41643f8e6a673",
     "url": "https://samuburgueno.github.io/turnos-cmd/static/js/2.a18ca41f.chunk.js"
   },
   {
-    "revision": "0c2c70bb2a85ec0b658a",
+    "revision": "890e78ee5ea7d1cc3575",
     "url": "https://samuburgueno.github.io/turnos-cmd/static/css/main.33f720f0.chunk.css"
   },
   {
-    "revision": "f971d190164b938d31ce5cb0d9bb788d",
+    "revision": "76abb36e487238ae50bbc33ce97ec76a",
     "url": "https://samuburgueno.github.io/turnos-cmd/index.html"
   }
 ];
