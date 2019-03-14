@@ -11,7 +11,7 @@ function Layout(props) {
 			<header>
 	          <div className="navbar shadow-sm text-center">
 	            <div className="container d-flex justify-content-between">
-	              <a href="/" className="navbar-brand d-flex align-items-center">
+	              <a href={process.env.PUBLIC_URL} className="navbar-brand d-flex align-items-center">
 	                <img className="img-responsive" src={logo} alt="Logo de Rosario= "/>
 	              </a>
 	              {/*<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">

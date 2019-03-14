@@ -9,7 +9,7 @@ function Turno(props) {
                 <div className="media-body">
                     <h5 className="mt-0 mb-1">{props.Oficina}</h5>
                     {props.Llamados && props.Llamados > 1 &&
-                        <div className="alert alert-warning" role="alert">
+                        <div className="alert alert-warning mr-3" role="alert">
                             <small>Este turno fué llamado mas de 1 vez</small>
                         </div>
                     }

@@ -43,7 +43,7 @@ class Api {
     }
 
     async getUltimosAtendidos(distrito) {
-        const resp = await fetch(`${BASE_API}action/datastore/search.json?resource_id=${ATENDIDOS[distrito]}`)
+        const resp = await fetch(`${BASE_API}action/datastore/search.json?resource_id=${ATENDIDOS[distrito]}&limit=300`)
         if (resp.status === 200) {
             const data = await resp.json();
             const grupos = groupBy(data.result.records, 'CodigoOficina');
