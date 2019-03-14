@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/turnos-cmd/precache-manifest.1eb5fc1869820d6af672849016c84268.js"
+  "https://samuburgueno.github.io/turnos-cmd/precache-manifest.07033fe28fca7e33530e81d17248dce2.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/turnos-cmd/index.html", {
+workbox.routing.registerNavigationRoute("https://samuburgueno.github.io/turnos-cmd/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
