@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/turnos-cmd/static/js/runtime~main.cadf59fd.js"
   },
   {
-    "revision": "5c2b9064f6c4a2a62620",
-    "url": "/turnos-cmd/static/js/main.6136ebe4.chunk.js"
+    "revision": "d38ff9a7eb599bba1d75",
+    "url": "/turnos-cmd/static/js/main.955c440f.chunk.js"
   },
   {
     "revision": "23bf3fc41643f8e6a673",
     "url": "/turnos-cmd/static/js/2.a18ca41f.chunk.js"
   },
   {
-    "revision": "5c2b9064f6c4a2a62620",
+    "revision": "d38ff9a7eb599bba1d75",
     "url": "/turnos-cmd/static/css/main.33f720f0.chunk.css"
   },
   {
-    "revision": "fcc3f26d37deaa23697e815ffcf7f1ce",
+    "revision": "12a3852be0530cbc4dd437f39cf7818b",
     "url": "/turnos-cmd/index.html"
   }
 ];
