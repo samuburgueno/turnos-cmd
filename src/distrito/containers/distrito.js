@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Layout from '../components/distrito.js';
+import Layout from '../components/layout.js';
 import Header from '../components/header.js';
 import Turnos from '../components/turnos.js';
 import Turno from '../components/turno.js';
@@ -9,7 +9,7 @@ import Api from '../../utils/api.js';
 
 const ATENDIDOS = {
     norte: '9867ebdb-b372-4c7e-8fe1-eb1c74173483',
-    'noroeste': ''
+    centro: '9867ebdb-b372-4c7e-8fe1-eb1c74173483'
 }
 
 class Distrito extends Component {
@@ -58,6 +58,7 @@ class Distrito extends Component {
                     title={`Distrito ${this.state.distrito}`}
                     description="Oficinas de atención al público">
                 </Header>
+                
                 {this.state.turnos &&
                     <Turnos>
                         {this.state.turnos.map((turno) => {

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import Layout from '../components/home-layout.js';
-
 class Home extends Component {
 	render() {
 		return (
-			<Layout />
+			<div>
+				<h4>Página principal</h4>
+			</div>
 		);
 	}
 }

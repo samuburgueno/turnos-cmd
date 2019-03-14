@@ -1,17 +1,13 @@
-.media.turno{
+.turno .media{
 	border-bottom: solid 1px rgba(216, 216, 216, .7);
 	padding: 10px 0px
 }
 
-.media.turno:first-child{
-	border-top: solid 1px rgba(216, 216, 216, .7);
-}
-
-.media.turno h5{
+.turno .media h5{
 	font-size: 16px;
 }
 
-.media.turno .ticket{
+.turno .media .ticket{
 	background-color: #00AEEF;
 	border: solid 2px #00AEEF;
 	border-radius: 6px;
@@ -19,11 +15,11 @@
 	text-align: center;
 }
 
-.media.turno .ticket span{
+.turno .media .ticket span{
 	display: block;
 }
 
-.media.turno .ticket span.turno{
+.turno .media .ticket span.turno{
 	padding: 0 5px;
 	color: #383B3E;
 	background-color: #FFF;
@@ -33,7 +29,7 @@
 	border-top-right-radius: 5px;
 }
 
-.media.turno .ticket span.label{
+.turno .media .ticket span.label{
 	color: #FFFFFF;
 	font-size: 10px;
 	font-weight: 900;

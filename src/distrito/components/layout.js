@@ -2,7 +2,7 @@ import React from 'react';
 
 function DistritoLayout(props) {
 	return(
-		<div className="Distrito">
+		<div className="distrito">
 			{props.children}
 		</div>
 	)

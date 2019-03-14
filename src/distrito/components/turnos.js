@@ -1,11 +1,11 @@
 import React from 'react';
 
-function TurnosLayout(props) {
+function Turnos(props) {
 	return(
-		<div className="TurnosList">
+		<div className="turnos-list">
 			{props.children}
 		</div>
 	)
 }
 
-export default TurnosLayout;
+export default Turnos;

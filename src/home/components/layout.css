@@ -1,9 +1,10 @@
 .Layout > header{
 	border-bottom: solid 3px #EE8601;
+    margin-bottom: 15px
 }
 
 .Layout > header .navbar-brand img{
-    max-width: 140px
+    max-width: 140px;
 }
 
 @media (min-width: 576px) {

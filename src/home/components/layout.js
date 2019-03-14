@@ -28,6 +28,9 @@ function Layout(props) {
 					    	<h5><strong>Distritos</strong></h5>
                             <NavLink to="/distrito/norte" className="nav-link">Norte</NavLink>
                             <NavLink to="/distrito/noroeste" className="nav-link">Noroeste</NavLink>
+                            <NavLink to="/distrito/centro" className="nav-link">Centro</NavLink>
+                            <NavLink to="/distrito/oeste" className="nav-link">Oeste</NavLink>
+                            <NavLink to="/distrito/sur" className="nav-link">Sur</NavLink>
                         </div>
 			        </div>
 			        <div className="col-sm-9">
