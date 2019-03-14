@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/turnos-cmd/static/css/main.33f720f0.chunk.css"
   },
   {
-    "revision": "12a3852be0530cbc4dd437f39cf7818b",
+    "revision": "e7f439c3f515d093da9f0a52d3fb0959",
     "url": "/turnos-cmd/index.html"
   }
 ];
