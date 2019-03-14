@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "https://samuburgueno.github.io/turnos-cmd/precache-manifest.07033fe28fca7e33530e81d17248dce2.js"
+  "https://samuburgueno.github.io/turnos-cmd/precache-manifest.8a6b63e5cc6d51d440ac4e51b722b452.js"
 );
 
 workbox.clientsClaim();
