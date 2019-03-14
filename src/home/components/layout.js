@@ -7,7 +7,7 @@ import './layout.css';
 
 function Layout(props) {
 	return(
-		<div className="Layout">
+		<div className="layout">
 			<header>
 	          <div className="navbar shadow-sm text-center">
 	            <div className="container d-flex justify-content-between">

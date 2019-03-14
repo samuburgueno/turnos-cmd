@@ -8,6 +8,11 @@ function Turno(props) {
             <div className="media">
                 <div className="media-body">
                     <h5 className="mt-0 mb-1">{props.Oficina}</h5>
+                    {props.Llamados && props.Llamados > 1 &&
+                        <div className="alert alert-warning" role="alert">
+                            <small>Este turno fué llamado mas de 1 vez</small>
+                        </div>
+                    }
                 </div>
                 <div className="ticket align-self-center">
                 	<span className="turno">{props.Turno}</span>
