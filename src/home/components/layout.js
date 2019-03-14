@@ -35,10 +35,10 @@ function Layout(props) {
 			        </div>
 			        <div className="col-sm-9">
 				        <div className="row">
-					        <div className="main-content col-sm-8">
+					        <div className="main-content col-sm-12 col-md-8">
 					        	{props.children}
 					        </div>
-					        <div className="sidebar-right col-sm-4">
+					        <div className="sidebar-right d-none d-md-block col-md-4">
 					    		{/*Barra lateral derecha*/}
 					        </div>
 				        </div>
