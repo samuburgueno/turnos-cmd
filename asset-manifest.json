@@ -1,13 +1,13 @@
 {
   "main.css": "https://samuburgueno.github.io/turnos-cmd/static/css/main.33f720f0.chunk.css",
-  "main.js": "https://samuburgueno.github.io/turnos-cmd/static/js/main.be9b8720.chunk.js",
-  "main.js.map": "https://samuburgueno.github.io/turnos-cmd/static/js/main.be9b8720.chunk.js.map",
+  "main.js": "https://samuburgueno.github.io/turnos-cmd/static/js/main.6160cb98.chunk.js",
+  "main.js.map": "https://samuburgueno.github.io/turnos-cmd/static/js/main.6160cb98.chunk.js.map",
   "runtime~main.js": "https://samuburgueno.github.io/turnos-cmd/static/js/runtime~main.c8fe6400.js",
   "runtime~main.js.map": "https://samuburgueno.github.io/turnos-cmd/static/js/runtime~main.c8fe6400.js.map",
   "static/js/2.a18ca41f.chunk.js": "https://samuburgueno.github.io/turnos-cmd/static/js/2.a18ca41f.chunk.js",
   "static/js/2.a18ca41f.chunk.js.map": "https://samuburgueno.github.io/turnos-cmd/static/js/2.a18ca41f.chunk.js.map",
   "index.html": "https://samuburgueno.github.io/turnos-cmd/index.html",
-  "precache-manifest.aa8c67513cd60c79edc18e3fc1c9f6f5.js": "https://samuburgueno.github.io/turnos-cmd/precache-manifest.aa8c67513cd60c79edc18e3fc1c9f6f5.js",
+  "precache-manifest.07033fe28fca7e33530e81d17248dce2.js": "https://samuburgueno.github.io/turnos-cmd/precache-manifest.07033fe28fca7e33530e81d17248dce2.js",
   "service-worker.js": "https://samuburgueno.github.io/turnos-cmd/service-worker.js",
   "static/css/main.33f720f0.chunk.css.map": "https://samuburgueno.github.io/turnos-cmd/static/css/main.33f720f0.chunk.css.map"
 }
