@@ -4,7 +4,7 @@ import './header.css';
 
 function Header(props) {
     return(
-    	<div className="distrito-header">
+    	<div className="distrito-header shadow-sm rounded">
 	        <div className="media">
 	            <div className="media-body">
 	                <h5 className="mt-0 mb-1">{props.title}</h5>

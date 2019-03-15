@@ -31,7 +31,12 @@ class Distrito extends Component {
 		const api = new Api()
 		const resp = await api.getUltimosAtendidos(distrito);
 
+		// Ordenamiento alfabetico por Nombres de Oficinas
 		if (!resp.error) {
+			resp.sort((a, b) => {
+				return a.Oficina < b.Oficina ? -1 : 1
+			})
+
 			this.setState({
 				turnos: resp,
 				distrito: distrito
@@ -59,13 +64,16 @@ class Distrito extends Component {
 						<h5>Ups! <br/></h5>
 						<h6>Parece que el distrito no está atendiendo en este momento.</h6>
 					</div>
-				} 
-				
+				}
+
 				{this.state.turnos &&
 					<Turnos>
 						{this.state.turnos.map((turno) => {
 							return(
-								<Turno key={turno.Ticket + turno.FechaHora} {...turno} />
+								<Turno
+									key={turno.Ticket + turno.FechaHora}
+									distrito={this.state.distrito}
+									{...turno} />
 							)
 						})}
 					</Turnos>

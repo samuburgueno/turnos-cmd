@@ -12,8 +12,15 @@ class Rutas extends Component {
             <Router basename={process.env.NODE_ENV === 'development' ? "" : "/turnos-cmd"}>
                 <Layout>
                     <Switch>
-                        <Route path="/" exact component={Home} />
-                        <Route path="/distrito/:distrito" component={Distrito} />
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/distrito/:distrito" component={Distrito} />
+                        <Route component={() => {
+                            return(
+                                <div>
+                                    <h4>Pagina no entontrada</h4>
+                                </div>
+                            )
+                        }} />
                     </Switch>
                 </Layout>
             </Router>
