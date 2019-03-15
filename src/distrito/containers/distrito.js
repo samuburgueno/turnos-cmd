@@ -4,6 +4,7 @@ import Layout from '../components/layout.js';
 import Header from '../components/header.js';
 import Turnos from '../components/turnos.js';
 import Turno from '../components/turno.js';
+import Spinner from '../components/spinner.js';
 
 import Api from '../../utils/api.js';
 
@@ -13,7 +14,8 @@ class Distrito extends Component {
 
 		this.state = {
 			distrito: false,
-			turnos: []
+			turnos: [],
+			cargando: false
 		}
 	}
 
@@ -28,6 +30,10 @@ class Distrito extends Component {
 	}
 
 	async obtenerTurnos(distrito) {
+		this.setState({
+			cargando: true
+		});
+
 		const api = new Api()
 		const resp = await api.getUltimosAtendidos(distrito);
 
@@ -39,25 +45,36 @@ class Distrito extends Component {
 
 			this.setState({
 				turnos: resp,
-				distrito: distrito
+				distrito: distrito,
+				cargando: false
 			});
 		} else {
 			this.setState({
 				error: resp.message,
 				turnos: false,
-				distrito: distrito
+				distrito: distrito,
+				cargando: false
 			});
 		}
 
 	}
 
 	render() {
+		if (this.state.cargando) {
+			return(
+				<Layout>
+					<Spinner />
+				</Layout>
+			)
+		}
+
 		return (
 			<Layout>
 				<Header
 					title={`Distrito ${this.state.distrito}`}
 					description="Oficinas de atención al público">
 				</Header>
+
 
 				{!this.state.turnos &&
 					<div>

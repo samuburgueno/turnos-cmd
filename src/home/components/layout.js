@@ -5,6 +5,11 @@ import logo from '../../assets/img/logo-rosario.png';
 
 import './layout.css';
 
+function cerrarMenu() {
+	const btn = document.getElementById("navbar-toggler");
+	btn.click()
+}
+
 function Layout(props) {
 	return(
 		<div className="layout">
@@ -14,7 +19,7 @@ function Layout(props) {
 						<a href={process.env.NODE_ENV === 'development' ? "/" : process.env.PUBLIC_URL} className="navbar-brand d-flex align-items-center">
 							<img className="img-responsive" src={logo} alt="Logo de Rosario= "/>
 						</a>
-						<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<button id="navbar-toggler" className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 							<span className="navbar-toggler-icon"></span>
 						</button>
 					</div>
@@ -26,11 +31,11 @@ function Layout(props) {
 			        	{/*Menu mobile*/}
 			        	<div className="collapse navbar-collapse" id="navbarNav">
 							<ul className="navbar-nav">
-								<NavLink to="/distrito/norte" className="nav-item">Norte</NavLink>
-			                    <NavLink to="/distrito/noroeste" className="nav-item">Noroeste</NavLink>
-			                    <NavLink to="/distrito/centro" className="nav-item">Centro</NavLink>
-			                    <NavLink to="/distrito/oeste" className="nav-item">Oeste</NavLink>
-			                    <NavLink to="/distrito/sur" className="nav-item">Sur</NavLink>
+								<NavLink onClick={() => cerrarMenu()} to="/distrito/norte" className="nav-item">Norte</NavLink>
+			                    <NavLink onClick={() => cerrarMenu()} to="/distrito/noroeste" className="nav-item">Noroeste</NavLink>
+			                    <NavLink onClick={() => cerrarMenu()} to="/distrito/centro" className="nav-item">Centro</NavLink>
+			                    <NavLink onClick={() => cerrarMenu()} to="/distrito/oeste" className="nav-item">Oeste</NavLink>
+			                    <NavLink onClick={() => cerrarMenu()} to="/distrito/sur" className="nav-item">Sur</NavLink>
 							</ul>
 						</div>
 					    {/*Menu principal desktop*/}

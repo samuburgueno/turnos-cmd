@@ -10,7 +10,7 @@ const ATENDIDOS = {
     centro: '67956927-a87d-4560-9537-27aba13226e4',
 }
 
-// Esta función me permite agrupar por alguna 
+// Esta función me permite agrupar por alguna
 // propiedad del objeto la lista de elementos de @list
 // Fuente: https://www.consolelog.io/group-by-in-javascript/
 function groupBy(list, prop) {
@@ -52,7 +52,7 @@ class Api {
             for (var key in grupos) {
                 ultimosTurnos.push(grupos[key][0])
             }
-            
+
             return ultimosTurnos;
         } else {
             return {
@@ -71,6 +71,19 @@ class Api {
             return {
                 error: resp.status,
                 message: resp.statusText
+            }
+        }
+    }
+
+    async getOficina(oficina, distrito) {
+        const resp = await fetch(`https://ws.rosario.gob.ar/ubicaciones/public/geojson/ubicaciones/all/all/${oficina}%20${distrito}?extendido=true`)
+        if (resp.status === 200) {
+            const data = await resp.json()
+            return data;
+        } else {
+            return {
+                error: resp.status,
+                message: "Servicio no disponible",
             }
         }
     }
