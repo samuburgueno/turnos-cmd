@@ -63,7 +63,7 @@ class Api {
     }
 
     async getTurnosByOficina(distrito, oficinas  = []) {
-        const resp = await fetch(`${BASE_API}action/datastore/search.json?resource_id=${ATENDIDOS[distrito]}&filters[CodigoOficina]=${oficinas}`)
+        const resp = await fetch(`${BASE_API}action/datastore/search.json?resource_id=${ATENDIDOS[distrito]}&filters[CodigoOficina]=${oficinas}&limit=0`)
         if (resp.status === 200) {
             const data = await resp.json()
             return data;

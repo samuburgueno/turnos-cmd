@@ -5,6 +5,7 @@ import Layout from './home/components/layout.js';
 
 import Home from './home/containers/home.js';
 import Distrito from './distrito/containers/distrito.js';
+import Oficina from './oficina/containers/oficina.js';
 
 class Rutas extends Component {
     render() {
@@ -14,6 +15,7 @@ class Rutas extends Component {
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route exact path="/distrito/:distrito" component={Distrito} />
+                        <Route exact path="/distrito/:distrito/:oficina" component={Oficina} />
                         <Route component={() => {
                             return(
                                 <div>
