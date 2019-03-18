@@ -76,10 +76,10 @@ class Api {
     }
 
     async getOficina(oficina, distrito) {
-        const resp = await fetch(`https://ws.rosario.gob.ar/ubicaciones/public/geojson/ubicaciones/all/all/${oficina}%20${distrito}?extendido=true`)
+        const resp = await fetch(`https://ws.rosario.gob.ar/ubicaciones/public/geojson/lugares/all/Oficina/${oficina}%20${distrito}?extendido=true`)
         if (resp.status === 200) {
             const data = await resp.json()
-            return data;
+            return data.features[0];
         } else {
             return {
                 error: resp.status,
