@@ -9,7 +9,9 @@ const ATENDIDOS = {
     norte: '9867ebdb-b372-4c7e-8fe1-eb1c74173483',
     centro: '67956927-a87d-4560-9537-27aba13226e4',
     noroeste: 'b8c881b9-a56b-4b96-98a7-f41c66bbf579',
-    oeste: '11a1253c-b178-4d0e-9557-737c14ddf2a3'
+    oeste: '11a1253c-b178-4d0e-9557-737c14ddf2a3',
+    sur: '207aa3ae-5b40-4063-b3c5-9d38f5b14388',
+    sudoeste: 'd15f8d5c-3c5e-4279-943e-65ca4ade0817'
 }
 
 // Esta función me permite agrupar por alguna

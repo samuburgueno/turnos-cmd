@@ -36,6 +36,7 @@ function Layout(props) {
 			                    <NavLink onClick={() => cerrarMenu()} to="/distrito/centro" className="nav-item">Centro</NavLink>
 			                    <NavLink onClick={() => cerrarMenu()} to="/distrito/oeste" className="nav-item">Oeste</NavLink>
 			                    <NavLink onClick={() => cerrarMenu()} to="/distrito/sur" className="nav-item">Sur</NavLink>
+			                    <NavLink onClick={() => cerrarMenu()} to="/distrito/sudoeste" className="nav-item">Sudoeste</NavLink>
 							</ul>
 						</div>
 					    {/*Menu principal desktop*/}
@@ -46,6 +47,7 @@ function Layout(props) {
                             <NavLink to="/distrito/centro" className="nav-link">Centro</NavLink>
                             <NavLink to="/distrito/oeste" className="nav-link">Oeste</NavLink>
                             <NavLink to="/distrito/sur" className="nav-link">Sur</NavLink>
+                            <NavLink to="/distrito/sudoeste" className="nav-link">Sudoeste</NavLink>
                         </div>
 			        </div>
 			        <div className="col-sm-9">
