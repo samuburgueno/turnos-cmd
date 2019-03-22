@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import moment from 'moment'
 
 import Api from '../../utils/api.js';
 

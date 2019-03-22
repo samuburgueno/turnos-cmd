@@ -8,6 +8,8 @@ const BASE_API = "https://datos.rosario.gob.ar/api/";
 const ATENDIDOS = {
     norte: '9867ebdb-b372-4c7e-8fe1-eb1c74173483',
     centro: '67956927-a87d-4560-9537-27aba13226e4',
+    noroeste: 'b8c881b9-a56b-4b96-98a7-f41c66bbf579',
+    oeste: '11a1253c-b178-4d0e-9557-737c14ddf2a3'
 }
 
 // Esta función me permite agrupar por alguna
