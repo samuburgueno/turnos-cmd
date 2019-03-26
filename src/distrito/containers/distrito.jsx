@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import Layout from '../components/layout.js';
-import Header from '../components/header.js';
-import Turnos from '../components/turnos.js';
-import Turno from '../components/turno.js';
-import Spinner from '../components/spinner.js';
+import Layout from '../components/layout';
+import Header from '../components/header';
+import Turnos from '../components/turnos';
+import Turno from '../components/turno';
+import Spinner from '../components/spinner';
 
-import Api from '../../utils/api.js';
+import Api from '../../utils/api';
 
 class Distrito extends Component {
 	constructor(props) {

@@ -8,7 +8,7 @@ function Turno(props) {
         <Link
             to={`/distrito/${props.distrito}/${props.CodigoOficina}`}
             title={`Ver detalle de la oficina ${props.Oficina}`}
-            className={`turno turno-${props.Ticket}`}>
+            className={`turno turno-${props.Numero}`}>
             <div className="media">
                 <div className="media-body mr-3">
                     <h5 className="mt-0 mb-1">{props.Oficina}</h5>
@@ -21,7 +21,7 @@ function Turno(props) {
                     }
                 </div>
                 <div className="ticket align-self-center">
-                	<span className="turno">{props.Turno}</span>
+                	<span className="turno">{props.Letra+props.Numero}</span>
                 	<span className="label">Turno</span>
                 </div>
                 <div className="arrow-icon align-self-center"></div>

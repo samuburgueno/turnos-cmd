@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Layout from './home/components/layout.js';
+import Layout from './home/components/layout';
 
-import Home from './home/containers/home.js';
-import Distrito from './distrito/containers/distrito.js';
-import Oficina from './oficina/containers/oficina.js';
+import Home from './home/containers/home';
+import Distrito from './distrito/containers/distrito';
+import Oficina from './oficina/containers/oficina';
 
 class Rutas extends Component {
     render() {
