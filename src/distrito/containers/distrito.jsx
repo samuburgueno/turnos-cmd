@@ -5,7 +5,7 @@ import Header from '../components/header';
 import Turnos from '../components/turnos';
 import Turno from '../components/turno';
 import Spinner from '../components/spinner';
-import FiltroOficinas from './filtro-oficinas'
+import FiltroOficinas from '../../filtro-oficina/containers/filtro-oficinas'
 
 import Api from '../../utils/api';
 
