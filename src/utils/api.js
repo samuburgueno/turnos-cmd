@@ -66,8 +66,29 @@ class Api {
         }
     }
 
+    async getUltimosAtendidosByOficina(distrito, oficinas  = []) {
+        const resp = await fetch(`${BASE_API}action/datastore/search.json?resource_id=${ATENDIDOS[distrito]}&filters[CodigoOficina]=${oficinas}&limit=300`)
+        if (resp.status === 200) {
+            const data = await resp.json();
+            console.log(data.result)
+            const grupos = groupBy(data.result.records, 'CodigoOficina');
+
+            var ultimosTurnos = [];
+            for (var key in grupos) {
+                ultimosTurnos.push(grupos[key][0])
+            }
+
+            return ultimosTurnos;
+        } else {
+            return {
+                error: resp.status,
+                message: resp.statusText
+            }
+        }
+    }
+
     async getTurnosByOficina(distrito, oficinas  = []) {
-        const resp = await fetch(`${BASE_API}action/datastore/search.json?resource_id=${ATENDIDOS[distrito]}&filters[CodigoOficina]=${oficinas}&limit=0`)
+        const resp = await fetch(`${BASE_API}action/datastore/search.json?resource_id=${ATENDIDOS[distrito]}&filters[CodigoOficina]=${oficinas}&limit=300`)
         if (resp.status === 200) {
             const data = await resp.json()
             return data;

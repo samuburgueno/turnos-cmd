@@ -5,6 +5,7 @@ import Header from '../components/header';
 import Turnos from '../components/turnos';
 import Turno from '../components/turno';
 import Spinner from '../components/spinner';
+import FiltroOficinas from './filtro-oficinas'
 
 import Api from '../../utils/api';
 
@@ -15,8 +16,13 @@ class Distrito extends Component {
 		this.state = {
 			distrito: false,
 			turnos: [],
-			cargando: false
+			cargando: false,
+			mostrarModal: false,
+			reiniciarFiltro: false
 		}
+
+		this.handlerModal = this.handlerModal.bind(this)
+		this.oficinasFiltradas = this.oficinasFiltradas.bind(this)
 	}
 
 	componentDidMount() {
@@ -29,13 +35,19 @@ class Distrito extends Component {
 		}
 	}
 
-	async obtenerTurnos(distrito) {
+	async obtenerTurnos(distrito = this.state.distrito, oficinas = false) {
 		this.setState({
 			cargando: true
 		});
 
 		const api = new Api()
-		const resp = await api.getUltimosAtendidos(distrito);
+		var resp = false
+
+		if (!oficinas) {
+			resp = await api.getUltimosAtendidos(distrito);
+		} else {
+			resp = await api.getUltimosAtendidosByOficina(distrito, oficinas);
+		}
 
 		// Ordenamiento alfabetico por Nombres de Oficinas
 		if (!resp.error) {
@@ -59,6 +71,28 @@ class Distrito extends Component {
 
 	}
 
+	handlerModal(event) {
+		if (this.state.reiniciarFiltro) {
+			this.setState({
+				reiniciarFiltro: false
+			});
+			this.obtenerTurnos()
+		} else {
+			this.setState({
+				mostrarModal: !this.state.mostrarModal
+			});
+		}
+	}
+
+	oficinasFiltradas(oficinas) {
+		this.obtenerTurnos(this.state.distrito, oficinas)
+
+		this.setState({
+			mostrarModal: !this.state.mostrarModal,
+			reiniciarFiltro: true
+		});
+	}
+
 	render() {
 		if (this.state.cargando) {
 			return(
@@ -72,6 +106,8 @@ class Distrito extends Component {
 			<Layout>
 				<Header
 					title={`Distrito ${this.state.distrito}`}
+					handlerModal={this.handlerModal}
+					reiniciarFiltro={this.state.reiniciarFiltro}
 					description="Oficinas de atención al público">
 				</Header>
 
@@ -94,6 +130,13 @@ class Distrito extends Component {
 							)
 						})}
 					</Turnos>
+				}
+
+				{this.state.mostrarModal &&
+					<FiltroOficinas 
+						oficinasFiltradas={this.oficinasFiltradas}
+						handlerModal={this.handlerModal}
+						oficinas={this.state.turnos} />
 				}
 			</Layout>
 		);

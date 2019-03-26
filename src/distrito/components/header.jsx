@@ -10,7 +10,13 @@ function Header(props) {
 	                <h5 className="mt-0 mb-1">{props.title}</h5>
 	                <p>{props.description}</p>
 	            </div>
-	            <div className="btn btn-primary align-self-center">Filtrar</div>
+	            {!props.reiniciarFiltro &&
+	            	<div onClick={props.handlerModal} className="btn btn-primary align-self-center">Filtrar</div>
+	            }
+
+	            {props.reiniciarFiltro &&
+	            	<div onClick={props.handlerModal} className="btn btn-primary align-self-center">Reiniciar</div>
+	            }
 	        </div>
         </div>
     )
