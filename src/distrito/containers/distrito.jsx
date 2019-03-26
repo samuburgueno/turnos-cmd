@@ -29,9 +29,9 @@ class Distrito extends Component {
 		this.obtenerTurnos(this.props.match.params.distrito)
 	}
 
-	componentWillReceiveProps(nextProps) {
-		if (nextProps.match.params.distrito !== this.state.distrito) {
-			this.obtenerTurnos(nextProps.match.params.distrito)
+	componentDidUpdate(prevProps) {
+		if (prevProps.match.params.distrito !== this.props.match.params.distrito) {
+			this.obtenerTurnos(this.props.match.params.distrito)
 		}
 	}
 
