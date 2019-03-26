@@ -19,6 +19,14 @@ function Turno(props) {
                     {props.Llamados && props.Llamados === 3 &&
                         <span class="badge badge-danger text-uppercase text-white">{props.Llamados}&deg; llamado</span>
                     }
+
+                    {props.Turno.indexOf("*") !== -1 &&
+                        <span class="badge badge-light text-uppercase text-secondary"><small>Turno derivado de otra oficina - {props.Ticket}</small></span>
+                    }
+
+                    {props.Turno.indexOf("!") !== -1 &&
+                        <span class="badge badge-light text-uppercase text-secondary"><small>Turno con prioridad</small></span>
+                    }
                 </div>
                 <div className="ticket align-self-center">
                 	<span className="turno">{props.Letra+props.Numero}</span>
