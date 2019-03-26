@@ -73,7 +73,6 @@ class Api {
         const resp = await fetch(`${BASE_API}action/datastore/search.json?resource_id=${ATENDIDOS[distrito]}&filters[CodigoOficina]=${oficinas}&limit=300`)
         if (resp.status === 200) {
             const data = await resp.json();
-            console.log(data.result)
             const grupos = groupBy(data.result.records, 'CodigoOficina');
 
             var ultimosTurnos = [];
