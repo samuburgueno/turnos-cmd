@@ -14,6 +14,9 @@ const ATENDIDOS = {
     sudoeste: 'd15f8d5c-3c5e-4279-943e-65ca4ade0817'
 }
 
+// URL de la API de ubicaciones
+// https://ws.rosario.gob.ar/ubicaciones/public/geojson/lugar/{lugar}/true
+
 // Esta función me permite agrupar por alguna
 // propiedad del objeto la lista de elementos de @list
 // Fuente: https://www.consolelog.io/group-by-in-javascript/
