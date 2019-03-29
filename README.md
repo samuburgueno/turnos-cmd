@@ -1,5 +1,5 @@
 # Turnos CMD
-Turnos CMD es una web app que permite consultar en tiempo real la atención al público de los centros de distritos de la ciudad de Rosario, está desarrollada con react.js y utiliza el portal [datos.rosario.gob.ar](datos.rosario.gob.ar) de la Municipalidad de Rosario para obtener la información de turnos.
+Turnos CMD es una web app que permite consultar en tiempo real la atención al público de los centros de distritos de la ciudad de Rosario, está desarrollada con react.js y utiliza el portal [datos.rosario.gob.ar](https://datos.rosario.gob.ar) de la Municipalidad de Rosario para obtener la información de turnos.
 
 ### Información de un turno
 + "!" Llamado con prioridad (Embarazada, Sillas de rueda, Edad avanzada, etc)
